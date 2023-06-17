@@ -7,8 +7,6 @@ const Post = (props) => {
   // 🔥 Make sure the parent of Post is passing the right props!
   const { post, likePost } = props;
 
-  console.log(props);
-
   return (
     <div className="post-border">
       <PostHeader username={post.username} thumbnailUrl={post.thumbnailUrl} />
@@ -21,7 +19,7 @@ const Post = (props) => {
         numberOfLikes={post.likes}
       />
       {/* Comments also wants its props! */}
-      <Comments />
+      <Comments comments={post.comments}/>
     </div>
   );
 };
